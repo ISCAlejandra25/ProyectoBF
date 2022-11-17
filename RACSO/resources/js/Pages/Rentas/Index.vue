@@ -32,9 +32,9 @@
                 </h2>
             </template>
             <div class="py-12">
-                <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-7xl sm:px-5 lg:px-0">
                     <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                        <div class="p-6 bg-white border-b border-gray-200">
+                        <div class="p-6 bg-white border-b border-gray-100">
                            <div class="mb-2">
                                 <Link :href="route('rentas.create')">
                                     <BreezeButton>Add Renta</BreezeButton></Link
@@ -50,17 +50,17 @@
                                         class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
                                     >
                                         <tr>
-                                            <th scope="col" class="px-6 py-3">#</th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-2 py-1">#</th>
+                                            <th scope="col" class="px-3 py-2">
                                                 Nombre
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-2">
                                                 Num Huesped Adulto
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-2">
                                                 Num. Huesped Menor
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-1 py-2">
                                                 Ciudad Procedencia
                                             </th>
                                             <th scope="col" class="px-6 py-3">
@@ -88,10 +88,10 @@
                                     </thead>
                                     <tbody>
                                         <tr v-for="renta in rentas" :key="renta.id" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            <th scope="row" class="px-2 py-1 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                                 {{ renta.id }}
                                             </th>
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            <th scope="row" class="px-4 py-2 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                                 {{ renta.nombre }}
                                             </th>
                                             <td class="px-6 py-4">

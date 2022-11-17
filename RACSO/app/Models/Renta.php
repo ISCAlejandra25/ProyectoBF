@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Renta extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre', 'nhAdulto', 'nhMenor','cProcedencia','telefono','correo','nombreCasa','fechaIngreso','fechaSalida'];
+    protected $fillable = ['nombre', 'nhAdulto', 'nhMenor','cProcedencia','telefono','correo','nomCasa','fechaIngreso','fechaSalida'];
 
 }

@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('rentas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('nhAdulto');
-            $table->string('nhMenor');
+            $table->int('nhAdulto');
+            $table->int('nhMenor');
             $table->string('cProcedencia');
             $table->string('telefono');
             $table->string('correo');
