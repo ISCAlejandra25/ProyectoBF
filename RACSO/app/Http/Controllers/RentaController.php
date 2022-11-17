@@ -112,7 +112,7 @@ class RentaController extends Controller
             'nhMenor' => 'required',
             'cProcedencia' => 'required',
             'telefono' => 'required',
-            'coreo' => 'required',
+            'correo' => 'required',
             'nomCasa' => 'required',
             'fechaIngreso' => 'required',
             'fechaSalida' => 'required'
@@ -122,7 +122,7 @@ class RentaController extends Controller
         $renta->nhMenor = $request->nhMenor;
         $renta->cProcedencia = $request->cProcedencia;
         $renta->telefono = $request->telefono;
-        $renta->coreo = $request->coreo;
+        $renta->correo = $request->correo;
         $renta->nomCasa = $request->nomCasa;
         $renta->fechaIngreso = $request->fechaIngreso;
         $renta->fechaSalida = $request->fechaSalida;
