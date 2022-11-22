@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\RentaController;
+use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\CasaController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -39,6 +41,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('rentas', RentaController::class);
-Route::resource('reportes', RentaController::class);
+Route::resource('reportes', ReporteController::class);
+Route::resource('casas', CasaController::class);
 
 require __DIR__.'/auth.php';

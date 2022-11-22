@@ -33,7 +33,7 @@ const showingNavigationDropdown = ref(false);
                   :href="route('dashboard')"
                   :active="route().current('dashboard')"
                 >
-                  Dashboard
+                  Inicio
                 </NavLink>
               </div>
               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -44,7 +44,7 @@ const showingNavigationDropdown = ref(false);
                   Rentas
                 </NavLink>
               </div>
-               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <NavLink
                   :href="route('reportes.index')"
                   :active="route().current('reportes.index')"
@@ -52,6 +52,15 @@ const showingNavigationDropdown = ref(false);
                   Reportes
                 </NavLink>
               </div>
+              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <NavLink
+                  :href="route('casas.index')"
+                  :active="route().current('casas.index')"
+                >
+                  Casas
+                </NavLink>
+              </div>
+
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
