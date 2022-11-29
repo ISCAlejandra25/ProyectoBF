@@ -78,7 +78,7 @@ class RentaController extends Controller
      */
     public function show(Renta $renta)
     {
-        //
+
     }
 
     /**

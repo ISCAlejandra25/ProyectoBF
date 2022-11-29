@@ -76,6 +76,9 @@
                                                 Edit
                                             </th>
                                             <th scope="col" class="px-6 py-3">
+                                                Visualizar
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">
                                                 Delete
                                             </th>
                                         </tr>
@@ -114,6 +117,15 @@
                                                         ) "
                                                    class="px-4 py-2 text-white bg-blue-600 rounded-lg" >
                                                    Edit</Link>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <Link :href="
+                                                        route(
+                                                            'reportes.show',
+                                                            reporte.id
+                                                        ) "
+                                                   class="px-4 py-2 text-white bg-blue-600 rounded-lg" >
+                                                   Ver</Link>
                                             </td>
                                             <td class="px-6 py-4">
                                                 <BreezeButton

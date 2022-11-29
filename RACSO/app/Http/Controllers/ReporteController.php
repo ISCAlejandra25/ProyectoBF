@@ -75,7 +75,12 @@ class ReporteController extends Controller
      */
     public function show(Reporte $reporte)
     {
-        //
+        return Inertia::render(
+            'Reportes/Show',
+            [
+                'reporte' => $reporte
+            ]
+        );
     }
 
     /**
