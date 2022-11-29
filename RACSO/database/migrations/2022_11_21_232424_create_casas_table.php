@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('wifi');
             $table->string('cochera');
             $table->string('direccionCompleta');
+            $table->string('descripcion');
+            $table->string('imagen');
             $table->timestamps();
         });
     }

@@ -54,7 +54,9 @@ class CasaController extends Controller
             'numTV' => 'required',
             'wifi' => 'required',
             'cochera' => 'required',
-            'direccionCompleta' => 'required'
+            'direccionCompleta' => 'required',
+            'descripcion' => 'required',
+            'imagen' => 'required'
         ]);
         Casa::create([
             'nomCasa' => $request->nomCasa,
@@ -66,7 +68,9 @@ class CasaController extends Controller
             'numTV' => $request->numTV,
             'wifi' => $request->wifi,
             'cochera' => $request->cochera,
-            'direccionCompleta' => $request->direccionCompleta
+            'direccionCompleta' => $request->direccionCompleta,
+            'descripcion' => $request->descripcion,
+            'imagen' => $request->imagen
 
         ]);
         sleep(1);
@@ -119,7 +123,9 @@ class CasaController extends Controller
             'numTV' => 'required',
             'wifi' => 'required',
             'cochera' => 'required',
-            'direccionCompleta' => 'required'
+            'direccionCompleta' => 'required',
+            'descripcion' => 'required',
+            'imagen' => 'required',
         ]);
         $casa->nomCasa = $request->nomCasa;
         $casa->numHabitaciones = $request->numHabitaciones;
@@ -131,6 +137,8 @@ class CasaController extends Controller
         $casa->wifi = $request->wifi;
         $casa->cochera = $request->cochera;
         $casa->direccionCompleta = $request->direccionCompleta;
+        $casa->descripcion = $request->descripcion;
+        $casa->imagen = $request->imagen;
         $casa->save();
         sleep(1);
         return redirect()->route('casas.index')->with('message', 'Casa Updated Successfully');

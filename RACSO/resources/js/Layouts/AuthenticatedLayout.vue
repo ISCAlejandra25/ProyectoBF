@@ -12,52 +12,52 @@ const showingNavigationDropdown = ref(false);
 
 <template>
   <div>
-    <div class="min-h-screen bg-gray-100">
-      <nav class="bg-white border-b border-gray-100">
+    <div class="min-h-screen bg-gray-100 ">
+      <nav class="bg-white border-b border-gray-100  dark:bg-orange-400">
         <!-- Primary Navigation Menu -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-            <div class="flex">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  dark:bg-orange-400">
+          <div class="flex justify-between h-16 ">
+            <div class="flex ">
               <!-- Logo -->
               <div class="shrink-0 flex items-center">
                 <Link :href="route('dashboard')">
                   <ApplicationLogo
-                    class="block h-9 w-auto fill-current text-gray-800"
+                    class="block h-9 w-auto fill-current text-gray-800" style="width:40%"
                   />
                 </Link>
               </div>
 
               <!-- Navigation Links -->
-              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+              <div class="hidden space-x-2 sm:-my-px sm:ml-5 sm:flex ">
                 <NavLink
                   :href="route('dashboard')"
                   :active="route().current('dashboard')"
                 >
-                  Inicio
+                  <b> Inicio</b>
                 </NavLink>
               </div>
-              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+              <div class="hidden space-x-2 sm:-my-px sm:ml-5 sm:flex">
                 <NavLink
                   :href="route('rentas.index')"
                   :active="route().current('rentas.index')"
                 >
-                  Rentas
+                  <b>Rentas</b>
                 </NavLink>
               </div>
-              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+              <div class="hidden space-x-2 sm:-my-px sm:ml-5 sm:flex">
                 <NavLink
                   :href="route('reportes.index')"
                   :active="route().current('reportes.index')"
                 >
-                  Reportes
+                  <b>Reportes</b>
                 </NavLink>
               </div>
-              <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+              <div class="hidden space-x-2 sm:-my-px sm:ml-5 sm:flex">
                 <NavLink
                   :href="route('casas.index')"
                   :active="route().current('casas.index')"
                 >
-                  Casas
+                  <b>Casas</b>
                 </NavLink>
               </div>
 
@@ -66,7 +66,7 @@ const showingNavigationDropdown = ref(false);
             <div class="hidden sm:flex sm:items-center sm:ml-6">
               <!-- Settings Dropdown -->
               <div class="ml-3 relative">
-                <Dropdown align="right" width="48">
+                <Dropdown align="right" width="10">
                   <template #trigger>
                     <span class="inline-flex rounded-md">
                       <button
@@ -219,7 +219,7 @@ const showingNavigationDropdown = ref(false);
       </nav>
 
       <!-- Page Heading -->
-      <header class="bg-white shadow" v-if="$slots.header">
+      <header class="bg-white shadow dark:bg-orange-100" v-if="$slots.header">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <slot name="header" />
         </div>

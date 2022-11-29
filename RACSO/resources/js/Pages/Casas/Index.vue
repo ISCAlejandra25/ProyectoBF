@@ -52,10 +52,10 @@
                                         <tr>
                                             <th scope="col" class="px-2 py-1">#</th>
                                             <th scope="col" class="px-3 py-2">
-                                                Nombre de Casa
+                                                Nom. Casa
                                             </th>
                                             <th scope="col" class="px-4 py-2">
-                                                Num. Habitaciones
+                                                Num. Habitación
                                             </th>
                                             <th scope="col" class="px-4 py-2">
                                                 Num. Baños
@@ -63,28 +63,34 @@
                                             <th scope="col" class="px-1 py-2">
                                                 Num. Albercas
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                 A/C
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                 Num. Ventilador
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                 Num. TV
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                 WiFi
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                Cochera
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
-                                               Dirección Completa
+                                            <th scope="col" class="px-4 py-3">
+                                               Dirección
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
+                                               Descripcion
+                                            </th>
+                                            <th scope="col" class="px-4 py-3">
+                                               imagen
+                                            </th>
+                                            <th scope="col" class="px-4 py-3">
                                                 Edit
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
+                                            <th scope="col" class="px-4 py-3">
                                                 Delete
                                             </th>
                                         </tr>
@@ -94,48 +100,56 @@
                                             <th scope="row" class="px-2 py-1 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                                 {{ casa.id }}
                                             </th>
-                                            <th scope="row" class="px-4 py-2 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                                            <th class="px-3 py-2">
                                                 {{ casa.nomCasa }}
                                             </th>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.numHabitaciones }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.numBanos }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.numAlbercas }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.aC }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.numVentilador }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.numTV }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.wifi }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.cochera }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-2">
                                                 {{ casa.direccionCompleta }}
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-6 py-2">
+                                                {{ casa.descripcion }}
+                                            </td>
+                                            <td class="px-6 py-2">
+                                                <v-container fluid>
+                                                     <img src="{{ casa.imagen }}" alt="Sotelo" style="width:10%" class="mx-auto d-block" />
+                                                </v-container>
+                                            </td>
+                                            <td class="px-3 py-1">
                                                 <Link :href="
                                                         route(
                                                             'casas.edit',
                                                             casa.id
                                                         ) "
-                                                   class="px-4 py-2 text-white bg-blue-600 rounded-lg" >
+                                                   class="px-3 py-2 text-white bg-blue-600 rounded-lg" >
                                                    Edit</Link>
                                             </td>
-                                            <td class="px-6 py-4">
+                                            <td class="px-3 py-1">
                                                 <BreezeButton
-                                                    class="bg-red-700"
+                                                    class="bg-red-700 px-3 py-2"
                                                     @click="destroy(casa.id)"
                                                 >
                                                     Delete

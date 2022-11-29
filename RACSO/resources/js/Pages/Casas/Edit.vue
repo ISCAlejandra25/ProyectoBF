@@ -24,6 +24,8 @@
         wifi: props.casa.wifi,
         cochera: props.casa.cochera,
         direccionCompleta: props.casa.direccionCompleta,
+        descripcion: props.casa.descripcion,
+        imagen: props.casa.imagen,
     });
 
 
@@ -229,6 +231,46 @@
                                     class="text-sm text-red-600"
                                 >
                                     {{ form.errors.direccionCompleta}}
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                    <label
+                                        for="descripcion"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                        ><b>Desscripción</b></label
+                                    >
+                                    <textarea
+                                        type="text"
+                                        v-model="form.descripcion"
+                                        name="descripcion"
+                                        id=""
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    ></textarea>
+                                    <div
+                                        v-if="form.errors.descripcion"
+                                        class="text-sm text-red-600"
+                                    >
+                                        {{ form.errors.descripcion }}
+                                    </div>
+                            </div>
+                            <div class="mb-6">
+                                <label
+                                    for="imagen"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                    ><b>Imagen</b> </label
+                                >
+                                <input
+                                    type="text"
+                                    v-model="form.imagen"
+                                    name="imagen"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder=""
+                                />
+                                <div
+                                    v-if="form.errors.imagen"
+                                    class="text-sm text-red-600"
+                                >
+                                    {{ form.errors.imagen}}
                                 </div>
                             </div>
                             <button
