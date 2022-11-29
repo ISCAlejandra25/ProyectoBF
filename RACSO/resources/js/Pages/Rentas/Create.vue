@@ -147,8 +147,12 @@
                                         placeholder="Selecciona el nombre de una casa"
                                     >
                                         <option selected>Seleccione una casa</option>
-                                        <option >Hacienda del mar</option>
-                                        <option >Mira Mar</option>
+                                        <option >Casa Vista</option>
+                                        <option >Casa Sol</option>
+                                        <option >Casa Bungalow Diana</option>
+                                        <option >Casa Casita</option>
+                                        <option >Casa Castillo Diana</option>
+                                        <option >Casa Colibri</option>
                                     </select>
                                     <div
                                         v-if="form.errors.nomCasa"

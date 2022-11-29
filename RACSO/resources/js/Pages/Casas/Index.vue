@@ -134,9 +134,11 @@
                                                 {{ casa.descripcion }}
                                             </td>
                                             <td class="px-6 py-2">
+                                                <h1>{{casa.imagen}}</h1>
                                                 <v-container fluid>
-                                                     <img src="{{ casa.imagen }}" alt="Sotelo" style="width:10%" class="mx-auto d-block" />
-                                                </v-container>
+                                                     <img src="../Casas/imagenes/casa3pisos.jpg" alt="Sotelo" style="width:50%" class="mx-auto d-block" />
+                                                     <!-- <img src="../Casas/imagenes/casa3pisos.jpg" alt="Sotelo" style="width:50%" class="mx-auto d-block" /> -->
+                                                    </v-container>
                                             </td>
                                             <td class="px-3 py-1">
                                                 <Link :href="

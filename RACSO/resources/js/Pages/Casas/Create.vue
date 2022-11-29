@@ -63,8 +63,12 @@
                                     placeholder="Selecciona el nombre de una casa"
                                 >
                                     <option selected>Seleccione una casa</option>
-                                    <option >Hacienda del mar</option>
-                                    <option >Mira Mar</option>
+                                    <option >Casa Vista</option>
+                                    <option >Casa Sol</option>
+                                    <option >Casa Bungalow Diana</option>
+                                    <option >Casa Casita</option>
+                                    <option >Casa Castillo Diana</option>
+                                    <option >Casa Colibri</option>
                                 </select>
                                 <div
                                     v-if="form.errors.nomCasa"
@@ -255,26 +259,29 @@
                             </div>
 
                             <div class="mb-6">
-                                <label
-                                    for="imagen"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                    ><b>Imagen</b> </label
+                                <label for="imagen"
+                                    class="block mb-2 text-sm form-label font-medium text-gray-900 dark:text-gray-300"
+                                    ><b>Imagen</b></label>
+                                <select
+                                    type="text"
+                                    id="imagen"
+                                    v-model="form.imagen"
+                                    name="imagen"
+                                    class="bg-gray-50 form-select border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                    placeholder="Selecciona la imagen de la casa"
                                 >
-                                <div class="mb-3">
-                                     <input
-                                        type="File"
-                                        v-model="form.imagen"
-                                        name="imagen"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                        placeholder=""
-                                    />
-                                </div>
-
+                                    <option selected>Seleccione una casa</option>
+                                    <option >../Casas/imagenes/casa3pisos.jpg</option>
+                                    <option >../Casas/imagenes/casablanca.jpg</option>
+                                    <option >../Casas/imagenes/casablanca2.jpg</option>
+                                    <option >../Casas/imagenes/casaColibri.jpg</option>
+                                    <option >../Casas/imagenes/casaPlaya.jpg</option>
+                                </select>
                                 <div
                                     v-if="form.errors.imagen"
                                     class="text-sm text-red-600"
                                 >
-                                    {{ form.errors.imagen}}
+                                    {{ form.errors.imagen }}
                                 </div>
                             </div>
                             <button

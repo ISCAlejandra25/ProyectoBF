@@ -31,7 +31,7 @@
     </script>
 
 <template>
-    <Head title="Visualizacion de reporte" />
+    <Head title="Edicion de reporte" />
 
     <BreezeAuthenticatedLayout>
         <template #header>
